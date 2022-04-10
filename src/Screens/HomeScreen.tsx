@@ -192,7 +192,7 @@ const HomeScreen = ({navigation}) => {
               color: COLORS.BLACK,
               paddingStart: 20,
             }}>
-            Le Programme d'aujourd'hui
+            Le Programme d'aujourd'hui !
           </Text>
         </View>
         {/* <AnimatedLogo /> */}
