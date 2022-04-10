@@ -309,7 +309,7 @@ const HomeScreen = ({navigation}) => {
               color: COLORS.BLACK,
               paddingStart: 20,
             }}>
-            Voter pour qui ?
+            It's time to vote !
           </Text>
         </View>
         <FlatList
