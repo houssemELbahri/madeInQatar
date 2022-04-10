@@ -1,0 +1,210 @@
+import React from 'react';
+import {View, Text, ScrollView, Image, StyleSheet} from 'react-native';
+import HistoryCard from '../Components/molecules/HistoryCard';
+
+const HistoryWorldCupScreen = () => {
+  return (
+    <ScrollView
+      style={styles.container}
+      contentContainerStyle={styles.contentContainer}>
+      <HistoryCard
+        host={''}
+        year={2026}
+        winner={''}
+        url={
+          'https://cloudinary.fifa.com/api/v1/picture/tournaments-sq-4/285023?tx=c_fill,g_auto,q_auto,w_150'
+        }
+      />
+      <HistoryCard
+        host={'QATAR'}
+        year={2022}
+        winner={'21 NOV-10 DEC'}
+        url={
+          'https://cloudinary.fifa.com/api/v1/picture/tournaments-sq-4/255711?tx=c_fill,g_auto,q_auto,w_150'
+        }
+      />
+      <HistoryCard
+        host={'RUSSIA'}
+        year={2018}
+        winner={'FRANCE'}
+        url={
+          'https://cloudinary.fifa.com/api/v1/picture/tournaments-sq-4/254645?tx=c_fill,g_auto,q_auto,w_150'
+        }
+      />
+      <HistoryCard
+        host={'BRAZIL'}
+        year={2014}
+        winner={'GERMANY'}
+        url={
+          'https://cloudinary.fifa.com/api/v1/picture/tournaments-sq-4/251164?tx=c_fill,g_auto,q_auto,w_150'
+        }
+      />
+      <HistoryCard
+        host={'SOUTH AFRICA'}
+        year={2010}
+        winner={'SPAIN'}
+        url={
+          'https://cloudinary.fifa.com/api/v1/picture/tournaments-sq-4/249715?tx=c_fill,g_auto,q_auto,w_150'
+        }
+      />
+      <HistoryCard
+        host={'GERMANY'}
+        year={2006}
+        winner={'ITALY'}
+        url={
+          'https://cloudinary.fifa.com/api/v1/picture/tournaments-sq-4/9741?tx=c_fill,g_auto,q_auto,w_150'
+        }
+      />
+      <HistoryCard
+        host={'SOUTH KOREA & JAPAN'}
+        year={2002}
+        winner={'BRAZIL'}
+        url={
+          'https://cloudinary.fifa.com/api/v1/picture/tournaments-sq-4/4395?tx=c_fill,g_auto,q_auto,w_150'
+        }
+      />
+      <HistoryCard
+        host={'FRANCE'}
+        year={1998}
+        winner={'FRANCE'}
+        url={
+          'https://cloudinary.fifa.com/api/v1/picture/tournaments-sq-4/1013?tx=c_fill,g_auto,q_auto,w_150'
+        }
+      />
+      <HistoryCard
+        host={'USA'}
+        year={1994}
+        winner={'BRAZIL'}
+        url={
+          'https://cloudinary.fifa.com/api/v1/picture/tournaments-sq-4/84?tx=c_fill,g_auto,q_auto,w_150'
+        }
+      />
+      <HistoryCard
+        host={'ITALY'}
+        year={1990}
+        winner={'GERMANY'}
+        url={
+          'https://cloudinary.fifa.com/api/v1/picture/tournaments-sq-4/76?tx=c_fill,g_auto,q_auto,w_150'
+        }
+      />
+      <HistoryCard
+        host={'MEXICO'}
+        year={1986}
+        winner={'ARGENTINA'}
+        url={
+          'https://cloudinary.fifa.com/api/v1/picture/tournaments-sq-4/68?tx=c_fill,g_auto,q_auto,w_150'
+        }
+      />
+      <HistoryCard
+        host={'SPAIN'}
+        year={1982}
+        winner={'ITALY'}
+        url={
+          'https://cloudinary.fifa.com/api/v1/picture/tournaments-sq-4/59?tx=c_fill,g_auto,q_auto,w_150'
+        }
+      />
+      <HistoryCard
+        host={'ARGENTINA'}
+        year={1978}
+        winner={'ARGENTINA'}
+        url={
+          'https://cloudinary.fifa.com/api/v1/picture/tournaments-sq-4/1?tx=c_fill,g_auto,q_auto,w_150'
+        }
+      />
+      <HistoryCard
+        host={'GERMANY'}
+        year={1974}
+        winner={'GERMANY'}
+        url={
+          'https://cloudinary.fifa.com/api/v1/picture/tournaments-sq-4/1?tx=c_fill,g_auto,q_auto,w_150'
+        }
+      />
+      <HistoryCard
+        host={'MEXICO'}
+        year={1970}
+        winner={'BRAZIL'}
+        url={
+          'https://cloudinary.fifa.com/api/v1/picture/tournaments-sq-4/1?tx=c_fill,g_auto,q_auto,w_150'
+        }
+      />
+      <HistoryCard
+        host={'ENGLAND'}
+        year={1966}
+        winner={'ENGLAND'}
+        url={
+          'https://cloudinary.fifa.com/api/v1/picture/tournaments-sq-4/1?tx=c_fill,g_auto,q_auto,w_150'
+        }
+      />
+      <HistoryCard
+        host={'CHILE'}
+        year={1962}
+        winner={'BRAZIL'}
+        url={
+          'https://cloudinary.fifa.com/api/v1/picture/tournaments-sq-4/1?tx=c_fill,g_auto,q_auto,w_150'
+        }
+      />
+      <HistoryCard
+        host={'SWEDEN'}
+        year={1958}
+        winner={'BRAZIL'}
+        url={
+          'https://cloudinary.fifa.com/api/v1/picture/tournaments-sq-4/1?tx=c_fill,g_auto,q_auto,w_150'
+        }
+      />
+      <HistoryCard
+        host={'SWITZERLAND'}
+        year={1954}
+        winner={'GERMANY'}
+        url={
+          'https://cloudinary.fifa.com/api/v1/picture/tournaments-sq-4/1?tx=c_fill,g_auto,q_auto,w_150'
+        }
+      />
+      <HistoryCard
+        host={'BRAZIL'}
+        year={1950}
+        winner={'URUGUAY'}
+        url={
+          'https://cloudinary.fifa.com/api/v1/picture/tournaments-sq-4/1?tx=c_fill,g_auto,q_auto,w_150'
+        }
+      />
+      <HistoryCard
+        host={'FRANCE'}
+        year={1938}
+        winner={'ITALY'}
+        url={
+          'https://cloudinary.fifa.com/api/v1/picture/tournaments-sq-4/1?tx=c_fill,g_auto,q_auto,w_150'
+        }
+      />
+      <HistoryCard
+        host={'ITALY'}
+        year={1934}
+        winner={'ITALY'}
+        url={
+          'https://cloudinary.fifa.com/api/v1/picture/tournaments-sq-4/1?tx=c_fill,g_auto,q_auto,w_150'
+        }
+      />
+      <HistoryCard
+        host={'URUGUAY'}
+        year={1930}
+        winner={'URUGUAY'}
+        url={
+          'https://cloudinary.fifa.com/api/v1/picture/tournaments-sq-4/1?tx=c_fill,g_auto,q_auto,w_150'
+        }
+      />
+    </ScrollView>
+  );
+};
+
+export default HistoryWorldCupScreen;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  contentContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingTop: 40,
+    paddingBottom: 10,
+  },
+});
