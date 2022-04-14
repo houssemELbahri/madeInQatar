@@ -28,6 +28,9 @@ import StadiumsScreen from '../Screens/StadiumsScreen';
 import HistoryWorldCupScreen from '../Screens/HistoryWorldCupScreen';
 import AboutCompetitionScreen from '../Screens/AboutCompetitionScreen';
 import ProductScreen from '../Screens/ProductScreen';
+import ProductsScreen from '../Screens/ProductsScreen';
+import ArticlesScreen from '../Screens/ArticlesScreen';
+import VotesScreen from '../Screens/VotesScreen';
 
 const SafeView = Platform.OS === 'ios' ? SafeAreaView : View;
 const {height} = Dimensions.get('window');
@@ -72,6 +75,21 @@ const SCREENS = [
   {
     name: 'ProductScreen',
     component: ProductScreen,
+    options: {options: {headerShown: false, animation: 'slide_from_left'}},
+  },
+  {
+    name: 'VotesScreen',
+    component: VotesScreen,
+    options: {options: {headerShown: false}},
+  },
+  {
+    name: 'ArticlesScreen',
+    component: ArticlesScreen,
+    options: {options: {headerShown: false, animation: 'slide_from_left'}},
+  },
+  {
+    name: 'ProductsScreen',
+    component: ProductsScreen,
     options: {options: {headerShown: false, animation: 'slide_from_left'}},
   },
   {

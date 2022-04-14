@@ -27,6 +27,7 @@ import DailyProgramCard from '../Components/molecules/DailyProgramCard';
 import ProductCard from '../Components/molecules/ProductCard';
 import AnimatedScrollView from '../Components/molecules/AnimatedScrollView';
 import AnimatedLogo from '../Components/molecules/AnimatedLogo';
+import HorizontalITitleWithText from '../Components/molecules/HorizontalITitleWithText';
 
 const PRODUCTS = [
   {
@@ -105,28 +106,6 @@ const HomeScreen = ({navigation}) => {
     navigation.navigate(screenName);
   };
 
-  // const renderItemVote = ({item}) => {
-  //   return (
-  //     <MIQCard
-  //       title={item.title}
-  //       content={item.introduction}
-  //       url={item.url}
-  //       onPress={navigateToVoteScreen}
-  //     />
-  //   );
-  // };
-
-  const renderItemVote = ({item}) => {
-    return (
-      <HorizontalCard
-        title={item.title}
-        content={item.content}
-        url={item.url}
-        onPress={() => navigateToScreenX('VoteScreen')}
-      />
-    );
-  };
-
   const renderItemProduct = ({item}) => {
     return (
       <ProductCard
@@ -148,6 +127,18 @@ const HomeScreen = ({navigation}) => {
       />
     );
   };
+
+  const renderItemVote = ({item}) => {
+    return (
+      <HorizontalCard
+        title={item.title}
+        content={item.content}
+        url={item.url}
+        onPress={() => navigateToScreenX('VoteScreen')}
+      />
+    );
+  };
+
   return (
     <View style={{flex: 1}}>
       <ScreenHeader
@@ -157,23 +148,10 @@ const HomeScreen = ({navigation}) => {
       <ScrollView
         style={styles.container}
         contentContainerStyle={styles.contentContainer}>
-        {/* <MIQSearchInput
-          placeholder={'Tapez pour rechercher'}
-          value={search}
-          setValue={setSearch}
-        /> */}
-        {/* <FlatList
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          data={VOTES}
-          keyExtractor={item => item.id}
-          renderItem={renderItemVote}
-        /> */}
         <View
           style={{
             justifyContent: 'center',
             alignItems: 'flex-start',
-            // height: 30,
             width: '100%',
             //backgroundColor: 'red',
             paddingTop: 15,
@@ -189,38 +167,13 @@ const HomeScreen = ({navigation}) => {
             Le Programme d'aujourd'hui !
           </Text>
         </View>
-        {/* <AnimatedLogo /> */}
-        {/* <DailyProgramCard
-          title={'houssem'}
-          content={'Jihed Lassoued'}
-          url={
-            'https://cdn5.vectorstock.com/i/1000x1000/60/59/germany-versus-spain-flag-vector-23936059.jpg'
-          }
-          onPress={navigateToArticleScreen}
-        /> */}
         <AnimatedScrollView dailyProgram={DAILYPROGRAM} />
-        <View
-          style={{
-            justifyContent: 'center',
-            alignItems: 'flex-start',
-            // height: 30,
-            width: '100%',
-            //backgroundColor: 'red',
-            paddingTop: 15,
-            paddingBottom: 5,
-          }}>
-          <Text
-            style={{
-              fontSize: 18,
-              fontWeight: 'bold',
-              color: COLORS.BLACK,
-              paddingStart: 20,
-            }}>
-            Profitez nos offres
-          </Text>
-        </View>
+        <HorizontalITitleWithText
+          title={'Profitez nos offres'}
+          text={'voir tout'}
+          onPress={() => navigateToScreenX('ProductsScreen')}
+        />
         <FlatList
-          //style={{backgroundColor: 'red'}}
           contentContainerStyle={{paddingHorizontal: 10}}
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -228,28 +181,12 @@ const HomeScreen = ({navigation}) => {
           keyExtractor={item => item.id}
           renderItem={renderItemProduct}
         />
-        <View
-          style={{
-            justifyContent: 'center',
-            alignItems: 'flex-start',
-            // height: 30,
-            width: '100%',
-            //backgroundColor: 'red',
-            paddingTop: 15,
-            paddingBottom: 5,
-          }}>
-          <Text
-            style={{
-              fontSize: 18,
-              fontWeight: 'bold',
-              color: COLORS.BLACK,
-              paddingStart: 20,
-            }}>
-            Exclusive Qatar 2022
-          </Text>
-        </View>
+        <HorizontalITitleWithText
+          title={'Exclusive Qatar 2022'}
+          text={'voir tout'}
+          onPress={() => navigateToScreenX('ArticlesScreen')}
+        />
         <FlatList
-          // style={{paddingStart: 15}}
           contentContainerStyle={{paddingHorizontal: 10}}
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -257,28 +194,12 @@ const HomeScreen = ({navigation}) => {
           keyExtractor={item => item.id}
           renderItem={renderItemArticle}
         />
-        <View
-          style={{
-            justifyContent: 'center',
-            alignItems: 'flex-start',
-            // height: 30,
-            width: '100%',
-            //backgroundColor: 'red',
-            paddingTop: 15,
-            paddingBottom: 5,
-          }}>
-          <Text
-            style={{
-              fontSize: 18,
-              fontWeight: 'bold',
-              color: COLORS.BLACK,
-              paddingStart: 20,
-            }}>
-            It's time to vote !
-          </Text>
-        </View>
+        <HorizontalITitleWithText
+          title={"It's time to vote !"}
+          text={'voir tout'}
+          onPress={() => navigateToScreenX('VotesScreen')}
+        />
         <FlatList
-          // style={{paddingStart: 15}}
           contentContainerStyle={{paddingHorizontal: 10}}
           horizontal
           showsHorizontalScrollIndicator={false}
