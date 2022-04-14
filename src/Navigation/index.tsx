@@ -13,7 +13,6 @@ import SplashScreen from 'react-native-splash-screen';
 import {NavigationContainer} from '@react-navigation/native';
 import {enableScreens} from 'react-native-screens';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import SplashScreen2 from '../Screens/SplashScreen';
 
 import BottomTabNavigation from './BottomTabNavigation';
 import VoteScreen from '../Screens/VoteScreen';
@@ -28,6 +27,7 @@ import CoachsScreen from '../Screens/CoachsScreen';
 import StadiumsScreen from '../Screens/StadiumsScreen';
 import HistoryWorldCupScreen from '../Screens/HistoryWorldCupScreen';
 import AboutCompetitionScreen from '../Screens/AboutCompetitionScreen';
+import ProductScreen from '../Screens/ProductScreen';
 
 const SafeView = Platform.OS === 'ios' ? SafeAreaView : View;
 const {height} = Dimensions.get('window');
@@ -54,11 +54,6 @@ export const navigateWithRootNavigator = (
 const {Navigator, Screen} = createNativeStackNavigator();
 
 const SCREENS = [
-  // {
-  //   name: 'SplashScreen',
-  //   component: SplashScreen2,
-  //   options: {options: {headerShown: false}},
-  // },
   {
     name: 'BottomTabNavigation',
     component: BottomTabNavigation,
@@ -72,6 +67,11 @@ const SCREENS = [
   {
     name: 'ArticleScreen',
     component: ArticleScreen,
+    options: {options: {headerShown: false, animation: 'slide_from_left'}},
+  },
+  {
+    name: 'ProductScreen',
+    component: ProductScreen,
     options: {options: {headerShown: false, animation: 'slide_from_left'}},
   },
   {

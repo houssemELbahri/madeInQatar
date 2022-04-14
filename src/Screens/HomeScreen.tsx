@@ -101,34 +101,28 @@ const POSTS = [
   },
 ];
 const HomeScreen = ({navigation}) => {
-  console.log('from HomeScreen ! ');
-
-  const navigateToArticleScreen = () => {
-    navigation.navigate('ArticleScreen');
+  const navigateToScreenX = (screenName: string) => {
+    navigation.navigate(screenName);
   };
 
-  const navigateToVoteScreen = () => {
-    navigation.navigate('VoteScreen');
-  };
+  // const renderItemVote = ({item}) => {
+  //   return (
+  //     <MIQCard
+  //       title={item.title}
+  //       content={item.introduction}
+  //       url={item.url}
+  //       onPress={navigateToVoteScreen}
+  //     />
+  //   );
+  // };
 
   const renderItemVote = ({item}) => {
-    return (
-      <MIQCard
-        title={item.title}
-        content={item.introduction}
-        url={item.url}
-        onPress={navigateToVoteScreen}
-      />
-    );
-  };
-
-  const renderItemArticle = ({item}) => {
     return (
       <HorizontalCard
         title={item.title}
         content={item.content}
         url={item.url}
-        onPress={navigateToArticleScreen}
+        onPress={() => navigateToScreenX('VoteScreen')}
       />
     );
   };
@@ -139,18 +133,18 @@ const HomeScreen = ({navigation}) => {
         title={item.title}
         price={item.price}
         url={item.url}
-        onPress={navigateToArticleScreen}
+        onPress={() => navigateToScreenX('ProductScreen')}
       />
     );
   };
 
-  const renderItemArticle2 = ({item}) => {
+  const renderItemArticle = ({item}) => {
     return (
       <VerticalCard
         title={item.content}
         content={item.content}
         url={item.url}
-        onPress={navigateToArticleScreen}
+        onPress={() => navigateToScreenX('ArticleScreen')}
       />
     );
   };
@@ -205,35 +199,6 @@ const HomeScreen = ({navigation}) => {
           onPress={navigateToArticleScreen}
         /> */}
         <AnimatedScrollView dailyProgram={DAILYPROGRAM} />
-        {/* <ScrollView
-          horizontal
-          paginEnabled={false}
-          showsHorizontalScrollIndicator={false}>
-          <DailyProgramCard
-            title={'houssem'}
-            content={'Jihed Lassoued'}
-            url={
-              'https://cdn5.vectorstock.com/i/1000x1000/60/59/germany-versus-spain-flag-vector-23936059.jpg'
-            }
-            onPress={navigateToArticleScreen}
-          />
-          <DailyProgramCard
-            title={'houssem'}
-            content={'Jihed Lassoued'}
-            url={
-              'https://cdn5.vectorstock.com/i/1000x1000/60/59/germany-versus-spain-flag-vector-23936059.jpg'
-            }
-            onPress={navigateToArticleScreen}
-          />
-          <DailyProgramCard
-            title={'houssem'}
-            content={'Jihed Lassoued'}
-            url={
-              'https://cdn5.vectorstock.com/i/1000x1000/60/59/germany-versus-spain-flag-vector-23936059.jpg'
-            }
-            onPress={navigateToArticleScreen}
-          />
-        </ScrollView> */}
         <View
           style={{
             justifyContent: 'center',
@@ -290,7 +255,7 @@ const HomeScreen = ({navigation}) => {
           showsHorizontalScrollIndicator={false}
           data={POSTS}
           keyExtractor={item => item.id}
-          renderItem={renderItemArticle2}
+          renderItem={renderItemArticle}
         />
         <View
           style={{
@@ -319,7 +284,7 @@ const HomeScreen = ({navigation}) => {
           showsHorizontalScrollIndicator={false}
           data={POSTS}
           keyExtractor={item => item.id}
-          renderItem={renderItemArticle}
+          renderItem={renderItemVote}
         />
         <View style={{paddingHorizontal: 20}}>
           <Text style={{color: COLORS.QATAR, fontSize: 25, fontWeight: '300'}}>
