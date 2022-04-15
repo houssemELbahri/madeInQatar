@@ -159,7 +159,7 @@ const HomeScreen = ({navigation}) => {
           }}>
           <Text
             style={{
-              fontSize: 18,
+              fontSize: 20,
               fontWeight: 'bold',
               color: COLORS.BLACK,
               paddingStart: 20,
