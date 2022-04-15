@@ -16,8 +16,8 @@ const HorizontalItemWithText: FC<HorizontalItemWithTextProps> = ({
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{title}</Text>
-      <TouchableOpacity onPress={onPress} style={{backgroundColor: 'red'}}>
-        <Text>{text}</Text>
+      <TouchableOpacity onPress={onPress}>
+        <Text style={styles.text}>{text}</Text>
       </TouchableOpacity>
     </View>
   );
@@ -26,20 +26,26 @@ const HorizontalItemWithText: FC<HorizontalItemWithTextProps> = ({
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    height: 40,
+    //height: 40,
     alignItems: 'center',
     //backgroundColor: 'red',
     width: '100%',
-    paddingHorizontal: 10,
+    paddingStart: 10,
+    paddingEnd: 15,
     justifyContent: 'space-between',
-    // paddingTop: 15,
-    // paddingBottom: 5,
+    paddingTop: 17,
+    paddingBottom: 2,
   },
   title: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: 'bold',
     color: COLORS.BLACK,
     paddingStart: 10,
+  },
+  text: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: COLORS.BLACK,
   },
 });
 
