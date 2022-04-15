@@ -74,7 +74,7 @@ const DAILYPROGRAM = [
   'https://i.ytimg.com/vi/SLatQWaZUAU/sddefault.jpg',
 ];
 
-const POSTS = [
+const ARTICLES = [
   {
     id: 1,
     content: 'Tunisia vs Danemark',
@@ -190,7 +190,7 @@ const HomeScreen = ({navigation}) => {
           contentContainerStyle={{paddingHorizontal: 10}}
           horizontal
           showsHorizontalScrollIndicator={false}
-          data={POSTS}
+          data={ARTICLES}
           keyExtractor={item => item.id}
           renderItem={renderItemArticle}
         />
@@ -203,7 +203,7 @@ const HomeScreen = ({navigation}) => {
           contentContainerStyle={{paddingHorizontal: 10}}
           horizontal
           showsHorizontalScrollIndicator={false}
-          data={POSTS}
+          data={ARTICLES}
           keyExtractor={item => item.id}
           renderItem={renderItemVote}
         />
